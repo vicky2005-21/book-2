@@ -1,0 +1,58 @@
+[
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "description": "The story of a young girl growing up in the South and a lawyer who defends a black man accused of rape.",
+        "copies": 5,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/1200px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg"
+    },
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "description": "A tragic love story set against the backdrop of the Roaring Twenties.",
+        "copies": 3,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqFwZQbGEIbHiafLlSQBybdGjNSToF9IRdm-XcSg63&s"
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "description": "A dystopian novel set in a totalitarian society where the government controls every aspect of citizens' lives.",
+        "copies": 2,
+        "image": "http://www.sup.org/img/covers/large/pid_36169.jpg"
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "description": "A romantic comedy of manners set in Georgian England.",
+        "copies": 4,
+        "image": "https://rukminim1.flixcart.com/image/416/416/kqidx8w0/book/m/t/q/pride-prejudice-original-imag4hhytfbvzyza.jpeg?q=70"
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "description": "The story of a young girl growing up in the South and a lawyer who defends a black man accused of rape.",
+        "copies": 5,
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/1200px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg"
+    },
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "description": "A tragic love story set against the backdrop of the Roaring Twenties.",
+        "copies": 3,
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqFwZQbGEIbHiafLlSQBybdGjNSToF9IRdm-XcSg63&s"
+    },
+    {
+        "title": "1984",
+        "author": "George Orwell",
+        "description": "A dystopian novel set in a totalitarian society where the government controls every aspect of citizens' lives.",
+        "copies": 2,
+        "image": "http://www.sup.org/img/covers/large/pid_36169.jpg"
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "description": "A romantic comedy of manners set in Georgian England.",
+        "copies": 4,
+        "image": "https://rukminim1.flixcart.com/image/416/416/kqidx8w0/book/m/t/q/pride-prejudice-original-imag4hhytfbvzyza.jpeg?q=70"
+    }
+]

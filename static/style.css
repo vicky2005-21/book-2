@@ -1,0 +1,212 @@
+/* Style for header */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Style for user welcome message */
+.user {
+    font-weight: bold;
+    float: right;
+}
+
+/* Style for search container */
+.search-container {
+    background-color: #4dd063;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style for book container */
+.book-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style for book card */
+.book {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+/* Style for book image */
+.book-img img {
+    width: 100%;
+}
+
+/* Style for add book container */
+.add-book-container {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 300px;
+    height: 30px;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+input[type="password"] {
+  width: 300px;
+  height: 30px;
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    width: 150px;
+    height: 40px;
+    background-color: #007bff;
+    color: orange;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+input[type="submit"]:hover {
+    color: #0062cc;
+}
+
+/* Apply a reset to remove default browser styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Apply a background image to the body */
+body {
+  background-image: url('https://www.example.com/background-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Center the content on the page */
+.container {
+  max-width: 500px;
+  margin: 0 auto;
+  height: 50%;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: row;
+}
+
+.form-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-panel label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.form-panel input[type="text"],
+.form-panel input[type="password"] {
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.form-panel button[type="submit"] {
+  background-color: #4CAF50;
+  color: blue;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Style the error message */
+.error {
+  color: red;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Style the link to the login page */
+p {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+  color: #555;
+}
+
+a {
+  color: #4CAF50;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Style the background image */
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://www.example.com/background-image.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+  z-index: -1;
+}

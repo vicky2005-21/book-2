@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Store</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="header">
+        <h1><a href="{{ url_for('index') }}">Book Store</a></h1>
+        {% if 'username' in session %}
+        <div class="user">Welcome, {{ session['username'] }}! <a href="{{ url_for('logout') }}">Logout</a></div>
+        {% endif %}
+    </div>
+
+    <div class="search-container">
+        <form method="POST" action="{{ url_for('index') }}">
+            <div class="form-group">
+                <input type="text" placeholder="Search books..." name="query" value="{{ query }}" class="form-control" id="search-box">
+                <button id="search-btn" class="btn btn-primary">Search</button>
+
+            </div>
+        </form>
+        <div id="search-results">
+            {% if results %}
+            <p>Showing results for "{{ query }}":</p>
+            {% else %}
+            <p>All books:</p>
+            {% endif %}
+            {% if not books %}
+            <p>No books found. Would you like to <a href="{{ url_for('add_book') }}">add a book</a>?</p>
+            {% elif query and not results %}
+            <p>No results found for "{{ query }}". Would you like to <a href="{{ url_for('add_book') }}">add this book</a>?</p>
+            {% endif %}
+            
+
+        </div>        
+    </div>
+
+    <div class="book-container">
+        {% for book in books %}
+        {% if query and (query|lower not in book.title|lower and query|lower not in book.author|lower) %}
+        {% else %}
+        <div class="book">
+            <div class="book-img">
+                <img src="{{ book.image }}" alt="{{ book.title }}">
+            </div>
+            <div class="book-info">
+                <h2>{{ book.title }}</h2>
+                <p><strong>Author:</strong> {{ book.author }}</p>
+                {% if book.publisher %}
+                <p><strong>Publisher:</strong> {{ book.publisher }}</p>
+                {% endif %}
+                {% if book.year %}
+                <p><strong>Year:</strong> {{ book.year }}</p>
+                {% endif %}
+                <p><strong>No. of copies:</strong> {{ book.copies }}</p>
+                <p><strong>Description:</strong> {{ book.description }}</p>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% if not books %}
+        <p>No books found.</p>
+        {% endif %}
+    </div>
+
+    {% if not query %}
+    <div class="add-book-container">
+        <p>Can't find the book you're looking for?</p>
+        <p><a href="{{ url_for('add_book') }}">Add a book</a></p>
+    </div>
+    {% endif %}
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+    <script>
+        
+        var searchBox = document.getElementById('search-box');
+        var searchResults = document.getElementById('search-results');
+    
+       
+        searchBox.addEventListener('keyup', function() {
+            
+            var query = this.value.toLowerCase();
+    
+            
+            var searchOption = document.querySelector('select[name="search_by"] option:checked').value;
+    
+            
+            var bookContainers = document.getElementsByClassName('book');
+    
+           
+            for (var i = 0; i < bookContainers.length; i++) {
+                
+                var title = bookContainers[i].querySelector('h2').textContent.toLowerCase();
+                var author = bookContainers[i].querySelector('p:nth-of-type(2)').textContent.toLowerCase();
+    
+                
+                if (searchOption === 'author') {
+                    if (author.includes(query)) {
+                        bookContainers[i].style.display = 'block';
+                    } else {
+                        bookContainers[i].style.display = 'none';
+                    }
+                } else {
+                    if (title.includes(query)) {
+                        bookContainers[i].style.display = 'block';
+                    } else {
+                        bookContainers[i].style.display = 'none';
+                    }
+                }
+            }
+    
+            
+            if (searchResults && searchResults.innerHTML === '' && query !== '') {
+                searchResults.innerHTML = '<p>No results found for "' + query 
+            } else if (searchResults) {
+                searchResults.innerHTML = '';
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>      

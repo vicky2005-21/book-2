@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login-page">
+            <h1>Login</h1>
+            {% if error %}
+            <p>{{ error }}</p>
+            {% endif %}
+            <form method="POST">
+                <label></label>
+                <input type="text" name="username" placeholder="username">
+                <br><br>
+                <label></label>
+                <input type="password" name="password" placeholder="password">
+                <br><br>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a></p>
+        </div>
+        </div>
+  
+
+<style>
+    .login-page{
+        padding: 200px;
+        padding-left: 20%;
+    }
+    body {
+        background-image: url("https://th.bing.com/th/id/OIP.KksNkNdLiSJqaYWTTS8vhwHaE7?w=270&h=180&c=7&r=0&o=5&dpr=2&pid=1.7");
+
+    }
+    
+   
+</style>
+</body>
+</html>

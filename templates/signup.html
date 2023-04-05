@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Signup</h1>
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+    <form method="POST">
+        <label>Username:</label>
+        <input type="text" name="username">
+        <br><br>
+        <label>Password:</label>
+        <input type="password" name="password">
+        <br><br>
+        <label>Confirm Password:</label>
+        <input type="password" name="confirm_password">
+        <br><br>
+        <button type="submit">Signup</button>
+        <div class="background-image">
+            <img src="/photo-1481627834876-b7833e8f5570.jpeg" alt="img">
+        </div>
+
+        <link rel="index" href="/index.html">
+    </form>
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+    <style>
+        .login-page{
+            padding: 200px;
+            padding-left: 75%;
+            border: 1px solid #B22222;
+            border-radius: 40px;   
+        }
+        #box{
+            height:30px;
+            width:10px;
+            border: 20px solid #fff2ff;
+        }
+        
+       
+    </style>
+
+</body>
+</html>
